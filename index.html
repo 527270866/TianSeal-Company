@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" data-image-prefix="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tianseal International Inc security seals catalog and product website." />
+  <title>Tianseal International Inc | Security Seals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="zh-CN" href="zh/index.html">
+  <link rel="alternate" hreflang="es" href="es/index.html">
+</head>
+
+<body>
+  <!-- ======================================================
+       NAVIGATION
+       Change the brand text and links here.
+  ======================================================= -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Tianseal International Inc home">
+        <img class="brand-logo" src="images/tianseal-logo.png" alt="Tianseal International Inc logo">
+      </a>
+
+      <button class="menu-button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#industries">Industries</a>
+        <a href="#news">News</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#about">About</a>
+        <div class="language-switcher" aria-label="Language selector">
+          <a class="active" href="index.html" lang="en">EN</a>
+          <a href="zh/index.html" lang="zh-CN">中文</a>
+          <a href="es/index.html" lang="es">ES</a>
+        </div>
+        <a class="nav-cta" href="#contact">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================
+         HERO
+         This is the first section visitors see.
+    ======================================================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">SECURITY SEAL SOLUTIONS</div>
+          <h1>Security you can trust.<br><span>From factory to destination.</span></h1>
+          <p>
+            A modern product showcase for high-security bolt seals, cable seals,
+            plastic seals and meter seals used across logistics, cargo and
+            industrial operations.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#products">Explore Products</a>
+            <a class="button button-ghost" href="#contact">Talk to Sales</a>
+          </div>
+
+          <div class="hero-points" aria-label="Product categories">
+            <span>High-security bolt seals</span>
+            <span>Cable seals</span>
+            <span>Plastic & meter seals</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Factory product image showcase">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+
+          <div class="product-stage factory-stage">
+            <div class="factory-stage-label"><span>FACTORY CATALOG</span><strong>Real product images</strong></div>
+            <div class="factory-main-photo">
+              <img src="images/products/H002-6%E5%90%88%E6%88%90.JPG" alt="H002-6 factory product image">
+              <div class="factory-photo-caption"><span>H Series</span><strong>H002-6</strong></div>
+            </div>
+            <a class="factory-mini-photo mini-one" href="products/fp008.html" aria-label="View FP008">
+              <img src="images/products/SKL%20FP008.jpg" alt="FP008 factory product image"><span>FP008</span>
+            </a>
+            <a class="factory-mini-photo mini-two" href="products/rf001.html" aria-label="View RF001">
+              <img src="images/products/SKL%20RF001.jpg" alt="RF001 factory product image"><span>RF001</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container trust-strip">
+        <span>Designed for</span>
+        <strong>Freight</strong>
+        <strong>Containers</strong>
+        <strong>Trucking</strong>
+        <strong>Utilities</strong>
+        <strong>Warehousing</strong>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PRODUCTS — generated from the real factory JPG filenames.
+    ======================================================= -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow dark">PRODUCT RANGE</div>
+            <h2>Browse Tianseal factory and special-sourcing models.</h2>
+          </div>
+          <p>
+            The catalog includes regular Tianseal factory models and selected special-sourcing items. Click any model to view its product page and request current specifications.
+          </p>
+        </div>
+
+        <div class="catalog-toolbar reveal">
+          <div class="catalog-search-wrap">
+            <label for="productSearch">Find a model</label>
+            <input id="productSearch" type="search" placeholder="Search H002, FP006, RF001..." autocomplete="off">
+          </div>
+          <div class="catalog-filters" id="catalogFilters" aria-label="Filter products by model series">
+            <button class="catalog-filter active" type="button" data-series="all">All models</button>
+            <button class="catalog-filter" type="button" data-series="H Series">H Series</button>
+            <button class="catalog-filter" type="button" data-series="FP Series">FP Series</button>
+            <button class="catalog-filter" type="button" data-series="P Series">P Series</button>
+            <button class="catalog-filter" type="button" data-series="Other Models">Other</button>
+          </div>
+          <div class="catalog-count"><strong id="visibleProductCount">0</strong><span>models shown</span></div>
+        </div>
+
+        <p class="catalog-sourcing-note">Special-sourcing items are available by request. Manufacturing source, MOQ, lead time and final specifications are confirmed before quotation.</p>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <p class="catalog-empty" id="catalogEmpty" hidden>No matching model found. Try a different product code.</p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         INDUSTRIES
+    ======================================================= -->
+    <section class="section industries-section" id="industries">
+      <div class="container">
+        <div class="section-heading light reveal">
+          <div>
+            <div class="eyebrow">APPLICATIONS</div>
+            <h2>Built around the way goods and assets actually move.</h2>
+          </div>
+          <p>
+            Organize your website by customer problem—not only by product
+            number—so buyers can find the right seal faster.
+          </p>
+        </div>
+
+        <div class="industry-grid">
+          <article class="industry-card reveal">
+            <span class="industry-number">01</span>
+            <div class="industry-photos">
+              <a class="industry-photo" href="products/h010.html" aria-label="View H010">
+                <img src="images/products/H010.jpg" alt="H010 security seal product photo">
+                <span>H010</span>
+              </a>
+              <a class="industry-photo" href="products/h002-6.html" aria-label="View H002-6">
+                <img src="images/products/H002-6%E5%90%88%E6%88%90.JPG" alt="H002-6 security seal product photo">
+                <span>H002-6</span>
+              </a>
+            </div>
+            <h3>Ocean &amp; Container Freight</h3>
+            <p>Seal container doors and make custody changes easier to inspect with heavy-duty bolt-seal options.</p>
+          </article>
+          <article class="industry-card reveal">
+            <span class="industry-number">02</span>
+            <div class="industry-photos">
+              <a class="industry-photo" href="products/h003.html" aria-label="View H003">
+                <img src="images/products/H003%20%E5%90%88%E6%88%90.jpg" alt="H003 security seal product photo">
+                <span>H003</span>
+              </a>
+              <a class="industry-photo" href="products/rf001.html" aria-label="View RF001">
+                <img src="images/products/SKL%20RF001.jpg" alt="RF001 security seal product photo">
+                <span>RF001</span>
+              </a>
+            </div>
+            <h3>Trucking &amp; Distribution</h3>
+            <p>Support trailer, truck and distribution-center security workflows with fast visual inspection.</p>
+          </article>
+          <article class="industry-card reveal">
+            <span class="industry-number">03</span>
+            <div class="industry-photos">
+              <a class="industry-photo" href="products/fp001.html" aria-label="View FP001">
+                <img src="images/products/SKL%20FP001.jpg" alt="FP001 security seal product photo">
+                <span>FP001</span>
+              </a>
+              <a class="industry-photo" href="products/fp008.html" aria-label="View FP008">
+                <img src="images/products/SKL%20FP008.jpg" alt="FP008 security seal product photo">
+                <span>FP008</span>
+              </a>
+            </div>
+            <h3>Warehousing</h3>
+            <p>Use visible seal identifiers to strengthen internal control, tote handling and inventory processes.</p>
+          </article>
+          <article class="industry-card reveal">
+            <span class="industry-number">04</span>
+            <div class="industry-photos">
+              <a class="industry-photo" href="products/m001.html" aria-label="View M001">
+                <img src="images/products/M001.JPG" alt="M001 security seal product photo">
+                <span>M001</span>
+              </a>
+              <a class="industry-photo" href="products/cs005.html" aria-label="View CS005">
+                <img src="images/products/CS005.JPG" alt="CS005 security seal product photo">
+                <span>CS005</span>
+              </a>
+            </div>
+            <h3>Utilities &amp; Equipment</h3>
+            <p>Protect meters, access points and controlled equipment from interference using compact tamper-evident seals.</p>
+          </article>
+          <article class="industry-card reveal">
+            <span class="industry-number">05</span>
+            <div class="industry-photos">
+              <a class="industry-photo" href="products/p001.html" aria-label="View P001">
+                <img src="images/products/P001.JPG" alt="P001 security seal product photo">
+                <span>P001</span>
+              </a>
+              <a class="industry-photo" href="products/p014.html" aria-label="View P014">
+                <img src="images/products/SKL%20P014.JPG" alt="P014 security seal product photo">
+                <span>P014</span>
+              </a>
+            </div>
+            <h3>Bags, Courier &amp; Retail</h3>
+            <p>Secure sacks, courier applications and lightweight closures with easy-to-apply plastic seal models.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         WHY / QUALITY
+    ======================================================= -->
+    <section class="section quality-section" id="quality">
+      <div class="container quality-grid">
+        <div class="quality-copy reveal">
+          <div class="eyebrow dark">WHY TIANSEAL</div>
+          <h2>A product website should answer the buyer’s questions quickly.</h2>
+          <p>
+            Instead of long paragraphs, this redesign uses short proof points,
+            product grouping and a clear quotation path.
+          </p>
+          <a class="button button-dark" href="#contact">Start an inquiry</a>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature reveal">
+            <div class="feature-icon">01</div>
+            <div>
+              <h3>Clear product identification</h3>
+              <p>Model numbers are visible immediately so repeat buyers can move fast.</p>
+            </div>
+          </div>
+          <div class="feature reveal">
+            <div class="feature-icon">02</div>
+            <div>
+              <h3>Customization-ready</h3>
+              <p>Add your verified options for color, serial numbers, logos and barcodes.</p>
+            </div>
+          </div>
+          <div class="feature reveal">
+            <div class="feature-icon">03</div>
+            <div>
+              <h3>Quote-focused structure</h3>
+              <p>Every important section points customers toward a clear next step.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         COMPANY NEWS & PUBLIC UPDATES
+    ======================================================= -->
+    <section class="section news-section" id="news">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow dark">COMPANY NEWS &amp; UPDATES</div>
+            <h2>Recent public records and company activity.</h2>
+          </div>
+          <p>Updates below are based on publicly available business and trade records. They are presented as factual company updates, not as independently published press releases.</p>
+        </div>
+        <div class="news-grid">
+          <article class="news-card reveal">
+            <div class="news-date"><span>MAR</span><strong>24</strong><small>2026</small></div>
+            <div class="news-card-body"><span class="news-kicker">EXPORT ACTIVITY</span><h3>High-security seal products appear in a March 2026 export record.</h3><p>Public customs data lists Tianseal International Inc in an export entry that includes H002-1 high-security bolt seals and cable-seal products.</p><a href="https://en.nbd.ltd/trader/info/NBDDIY349045547" target="_blank" rel="noopener">View public trade source ↗</a></div>
+          </article>
+          <article class="news-card reveal">
+            <div class="news-date"><span>MAR</span><strong>25</strong><small>2026</small></div>
+            <div class="news-card-body"><span class="news-kicker">COMPANY STATUS</span><h3>Tianseal International Inc is listed as an active California corporation.</h3><p>A public business-record profile, updated March 25, 2026, lists the corporation as active and notes its original filing date of October 13, 2016.</p><a href="https://www.bizprofile.net/ca/arcadia/tianseal-international-inc" target="_blank" rel="noopener">View public business record ↗</a></div>
+          </article>
+          <article class="news-card reveal">
+            <div class="news-date"><span>2023</span><strong>+</strong><small>TRADE</small></div>
+            <div class="news-card-body"><span class="news-kicker">INTERNATIONAL TRADE</span><h3>Public records show recurring security-seal shipments into Mexico.</h3><p>Trade records list multiple 2023 shipments of security seals exported by Tianseal International Inc, providing a public record of cross-border commercial activity.</p><a href="https://www.veritradecorp.com/en/mexico/imports-and-exports-j-d-dispositivos-tecnologicos-sa-de-cv/rfc-d100729d39" target="_blank" rel="noopener">View trade record ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CERTIFICATES & QUALITY DOCUMENTATION
+    ======================================================= -->
+    <section class="section certificates-section" id="certificates">
+      <div class="container">
+        <div class="section-heading light reveal">
+          <div><div class="eyebrow">CERTIFICATES &amp; QUALITY</div><h2>Quality documentation buyers can review before ordering.</h2></div>
+          <p>This section separates company-provided certification claims from publicly verifiable registration records. Add the original certificate scans here when they are available.</p>
+        </div>
+        <div class="certificate-grid">
+          <article class="certificate-card reveal">
+            <div class="certificate-badge">ISO</div>
+            <span class="certificate-status company-claim">Company-provided claim</span>
+            <h3>ISO 9001 Quality Management</h3>
+            <p>The company information supplied for this website states that the manufacturing operation is certified under ISO 9001 quality-management standards.</p>
+            <span class="certificate-note">Upload the current certificate scan to this website before presenting it as independently verified.</span>
+          </article>
+          <article class="certificate-card reveal">
+            <div class="certificate-badge">CA</div>
+            <span class="certificate-status public-record">Public record</span>
+            <h3>California Corporate Registration</h3>
+            <p>Tianseal International Inc is listed in public business records as an active California corporation, originally filed in 2016.</p>
+            <a class="certificate-link" href="https://www.bizprofile.net/ca/arcadia/tianseal-international-inc" target="_blank" rel="noopener">Review public record ↗</a>
+          </article>
+          <article class="certificate-card reveal certificate-upload-card">
+            <div class="certificate-badge">DOC</div>
+            <span class="certificate-status ready-slot">Document slot</span>
+            <h3>Additional Product &amp; Factory Certificates</h3>
+            <p>Use this card for test reports, product-specific certifications, inspection records or additional quality documents once the originals are supplied.</p>
+            <span class="certificate-note">Recommended: PDF/JPG scan, certificate number, issuing body and validity dates.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         ABOUT
+    ======================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-panel reveal">
+          <span class="big-label">Tianseal</span>
+          <div class="about-line"></div>
+          <p>Security seal product design for international logistics and industrial use.</p>
+        </div>
+
+        <div class="about-copy reveal">
+          <div class="eyebrow dark">ABOUT</div>
+          <h2>Make the company feel established without making the site feel old.</h2>
+          <p>
+            TAnfu E-Seal Technology Company Limited is a professional manufacturer of high-security sealing solutions based in China.
+            Formerly known as Suzhou Skyland Hardware Manufacturing Co., Ltd., the company was originally established in 2009 and has
+             over 15 years of manufacturing experience in the security seal industry
+          </p>
+          <p>
+            The company operates approximately 15 production lines with a workforce of around 60 skilled employees, 
+            covering a production area of 5,000 square meters. Our monthly production capacity reaches up to 5 million pieces.
+             We are certified under ISO 9001 quality management standards, ensuring consistent product quality and operational excellence.
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CONTACT
+         The form is front-end only until connected to a service/backend.
+    ======================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <div class="eyebrow">REQUEST A QUOTE</div>
+          <h2>Tell us what you need to secure.</h2>
+          <p>
+            Replace the placeholder contact information below with your real
+            sales email, phone number and business address.
+          </p>
+
+          <div class="contact-details">
+            <div>
+              <span>Email</span>
+               <strong>bylandoy1@gmail.com</strong><br>
+                <strong>bylandoy1@sklboltseal.com</strong>
+            </div>
+            <div>
+              <span>Phone & Whatsapp</span>
+              <strong>+1 (909) 480-6506</strong>
+            </div>
+          </div>
+        </div>
+
+        <form class="quote-form reveal" id="quoteForm" action="https://formsubmit.co/bylandoy1@sklboltseal.com" method="POST">
+          <input type="hidden" name="_subject" value="New Tianseal Website Inquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="website_language" value="English">
+          <label>
+            Your name
+            <input type="text" name="name" placeholder="Jane Smith" required>
+          </label>
+
+          <label>
+            Business email
+            <input type="email" name="email" placeholder="jane@company.com" required>
+          </label>
+
+          <label>
+            Product
+            <select name="product" id="productSelect">
+              <option value="">Select a product</option>
+              <option value="other">Other / Not sure</option>
+            </select>
+          </label>
+
+          <label>
+            Quantity / requirements
+            <textarea name="message" rows="5" placeholder="Example: 20,000 blue bolt seals, sequential numbering, logo printing..."></textarea>
+          </label>
+
+          <button class="button button-primary form-button" type="submit">
+            Send inquiry
+          </button>
+
+          <p class="form-note" id="formNote">
+            Inquiries submitted here are sent to <strong>bylandoy1@sklboltseal.com</strong>. On the first live submission, the mailbox owner must confirm the FormSubmit activation email.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <img class="brand-logo footer-logo" src="images/tianseal-logo.png" alt="Tianseal International Inc logo">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#products">Products</a><a href="#industries">Industries</a><a href="#news">News</a><a href="#certificates">Certificates</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+      <p class="copyright">© <span id="year"></span> Tianseal International Inc.</p>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
