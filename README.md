@@ -18,3 +18,14 @@ Products that were not previously shown on the website are not presented as Tian
 `build_catalog.py` is the older factory-image generator. Running it by itself will rebuild `products.js` only from factory JPG filenames and can remove the special-sourcing catalog entries. Preserve the current `products.js`, special product pages, and `images/products/special/` directory when making future catalog changes.
 
 Open `index.html` with VS Code Live Server for local preview.
+
+## Search discovery maintenance
+
+Run `python3 scripts/build_search.py` after editing or adding pages, then
+`python3 scripts/build_search.py --check` and `python3 scripts/check_search.py`.
+This dependency-free generator uses the configured GitHub Pages project URL and published HTML
+files. It updates canonical/hreflang tags, homepage descriptions and native product
+directories, plus robots.txt and sitemap.xml. It never invokes the legacy catalog
+builder or modifies products.js, styles, images, or the Google verification file.
+Sitemap dates are omitted because reliable content modification dates are unavailable.
+See PROJECT.md and BACKLOG.md for deployment prerequisites and account actions.

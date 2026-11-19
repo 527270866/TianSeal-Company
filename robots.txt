@@ -1,0 +1,5 @@
+# Project-path copy; robots rules apply only at the host root.
+User-agent: *
+Allow: /
+
+Sitemap: https://527270866.github.io/TianSeal-Company/sitemap.xml
