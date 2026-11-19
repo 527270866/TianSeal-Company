@@ -7,6 +7,7 @@ import re
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+SITE_URL = 'https://527270866.github.io/TianSeal-Company'
 LANGS = {'en': '', 'zh-CN': 'zh/', 'es': 'es/'}
 DESCRIPTIONS = {
     'en': 'Explore Tianseal International Inc security seals: bolt seals, cable seals, plastic seals and meter seals. View product details and request a quote.',
@@ -16,10 +17,7 @@ DESCRIPTIONS = {
 LABELS = {'en': 'Browse all product models', 'zh-CN': '浏览全部产品型号', 'es': 'Ver todos los modelos de productos'}
 
 def generate():
-    host = (ROOT / 'CNAME').read_text().strip()
-    if not re.fullmatch(r'[a-zA-Z0-9.-]+', host):
-        raise ValueError('CNAME must contain a single domain')
-    origin = 'https://' + host
+    origin = SITE_URL
     pages = sorted([ROOT / (p + 'index.html') for p in LANGS.values()] +
                    [f for p in LANGS.values() for f in (ROOT / p / 'products').glob('*.html')])
     paths = {p.relative_to(ROOT).as_posix() for p in pages}
@@ -65,7 +63,7 @@ def generate():
         ET.SubElement(ET.SubElement(sitemap, ns + 'url'), ns + 'loc').text = url(path)
     ET.indent(sitemap, space='  ')
     outputs['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(sitemap, encoding='unicode') + '\n'
-    outputs['robots.txt'] = f'User-agent: *\nAllow: /\n\nSitemap: {origin}/sitemap.xml\n'
+    outputs['robots.txt'] = f'# Project-path copy; robots rules apply only at the host root.\nUser-agent: *\nAllow: /\n\nSitemap: {origin}/sitemap.xml\n'
     return outputs
 
 def main():

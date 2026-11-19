@@ -23,7 +23,7 @@ Open `index.html` with VS Code Live Server for local preview.
 
 Run `python3 scripts/build_search.py` after editing or adding pages, then
 `python3 scripts/build_search.py --check` and `python3 scripts/check_search.py`.
-This dependency-free generator uses the existing CNAME domain and published HTML
+This dependency-free generator uses the configured GitHub Pages project URL and published HTML
 files. It updates canonical/hreflang tags, homepage descriptions and native product
 directories, plus robots.txt and sitemap.xml. It never invokes the legacy catalog
 builder or modifies products.js, styles, images, or the Google verification file.

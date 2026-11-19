@@ -1,3 +1,20 @@
+# Current decision: free GitHub Pages
+
+The owner clarified that tsseal.com may never have been registered, then authorized
+switching to https://527270866.github.io/TianSeal-Company/. This supersedes the
+prior domain-retention plan below. Remove CNAME and the Pages custom-domain setting;
+retain the exact Google verification file. Canonical/hreflang/sitemap URLs now
+include /TianSeal-Company/. A project-path robots.txt does not control crawlers:
+robots rules are read at https://527270866.github.io/robots.txt. Submit the sitemap
+directly in the matching Search Console and Bing properties after deployment.
+
+Current code validation: all 219 pages pass; live deployment/settings verification pending.
+Next task: clear the Pages custom-domain setting, deploy, then verify HTTPS and submit
+https://527270866.github.io/TianSeal-Company/sitemap.xml in the existing matching
+Search Console property if it is still verified. No paid domain is required.
+
+## Historical audit and earlier plan (superseded where conflicting)
+
 # Tianseal Website & Search Visibility
 
 ## Scope and constraints

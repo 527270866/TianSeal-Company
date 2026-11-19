@@ -5,7 +5,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, urljoin, unquote
 import xml.etree.ElementTree as ET
 import subprocess
-from build_search import ROOT, LANGS, generate
+from build_search import ROOT, LANGS, SITE_URL, generate
 
 class Page(HTMLParser):
     def __init__(self, text):
@@ -21,7 +21,8 @@ class Page(HTMLParser):
         if tag == 'a' and 'href' in a: self.anchors.append(a['href'])
         if tag == 'meta' and a.get('name') == 'description': self.descriptions.append(a.get('content'))
 
-origin = 'https://' + (ROOT / 'CNAME').read_text().strip()
+origin = SITE_URL
+assert not (ROOT / 'CNAME').exists(), 'Custom domain must be removed'
 outputs = generate()
 for path, expected in outputs.items():
     assert (ROOT / path).read_text() == expected, f'Stale: {path}'
@@ -32,7 +33,7 @@ assert len(urls) == len(expected_pages)
 pages = {}
 for url in urls:
     assert url.startswith(origin + '/') and not urlsplit(url).query
-    relative = unquote(urlsplit(url).path.lstrip('/'))
+    relative = unquote(url[len(origin) + 1:])
     if not relative or relative.endswith('/'): relative += 'index.html'
     assert relative in expected_pages, f'Unknown sitemap target: {relative}'
     page = Page((ROOT / relative).read_text())
@@ -58,7 +59,7 @@ while queue:
         if target in pages and target not in seen: queue.append(target)
 assert set(pages) == seen, f'Orphan pages: {set(pages) - seen}'
 # Critical identity files must match the recovered source byte for byte.
-for path in ['CNAME', 'google8be39db8c6f5e728.html']:
+for path in ['google8be39db8c6f5e728.html']:
     original = subprocess.check_output(['git', 'show', '93b8b5c29c31b3c0784d9fa73b85a086016dc7c7:' + path], cwd=ROOT)
     assert (ROOT / path).read_bytes() == original, f'Identity file changed: {path}'
 print(f'PASS: {len(pages)} canonical pages, reciprocal languages, sitemap coverage, no orphan pages, preserved identity files')
