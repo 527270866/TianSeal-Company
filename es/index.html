@@ -441,7 +441,7 @@
 
     <!-- ======================================================
          CONTACT
-         The form is front-end only until connected to a service/backend.
+         Inquiry delivery is configured through FormSubmit; activation is documented in FORM_INQUIRY_SETUP.md.
     ======================================================= -->
     <section class="section contact-section" id="contact">
       <div class="container contact-grid">
@@ -455,12 +455,12 @@
           <div class="contact-details">
             <div>
               <span>Correo electrónico</span>
-               <strong>bylandoy1@gmail.com</strong><br>
-                <strong>bylandoy1@sklboltseal.com</strong>
+               <a href="mailto:bylandoy1@gmail.com"><strong>bylandoy1@gmail.com</strong></a><br>
+                <a href="mailto:bylandoy1@sklboltseal.com"><strong>bylandoy1@sklboltseal.com</strong></a>
             </div>
             <div>
               <span>Teléfono y WhatsApp</span>
-              <strong>+1 (909) 480-6506</strong>
+              <a href="tel:+19094806506"><strong>+1 (909) 480-6506</strong></a>
             </div>
           </div>
         </div>
@@ -472,12 +472,12 @@
           <input type="hidden" name="website_language" value="Español">
           <label>
             Nombre
-            <input type="text" name="name" placeholder="Jane Smith" required>
+            <input type="text" name="name" autocomplete="name" placeholder="Jane Smith" required>
           </label>
 
           <label>
             Correo empresarial
-            <input type="email" name="email" placeholder="jane@company.com" required>
+            <input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" placeholder="jane@company.com" required>
           </label>
 
           <label>
@@ -498,7 +498,7 @@
           </button>
 
           <p class="form-note" id="formNote">
-            Las consultas enviadas aquí se dirigirán a <strong>bylandoy1@sklboltseal.com</strong>. También puede escribir directamente a esta dirección.
+            Las consultas enviadas aquí se dirigirán a <a href="mailto:bylandoy1@sklboltseal.com"><strong>bylandoy1@sklboltseal.com</strong></a>. También puede escribir directamente a esta dirección.
           </p>
         </form>
       </div>

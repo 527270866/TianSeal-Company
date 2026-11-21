@@ -441,7 +441,7 @@
 
     <!-- ======================================================
          CONTACT
-         The form is front-end only until connected to a service/backend.
+         Inquiry delivery is configured through FormSubmit; activation is documented in FORM_INQUIRY_SETUP.md.
     ======================================================= -->
     <section class="section contact-section" id="contact">
       <div class="container contact-grid">
@@ -455,12 +455,12 @@
           <div class="contact-details">
             <div>
               <span>邮箱</span>
-               <strong>bylandoy1@gmail.com</strong><br>
-                <strong>bylandoy1@sklboltseal.com</strong>
+               <a href="mailto:bylandoy1@gmail.com"><strong>bylandoy1@gmail.com</strong></a><br>
+                <a href="mailto:bylandoy1@sklboltseal.com"><strong>bylandoy1@sklboltseal.com</strong></a>
             </div>
             <div>
               <span>电话与 WhatsApp</span>
-              <strong>+1 (909) 480-6506</strong>
+              <a href="tel:+19094806506"><strong>+1 (909) 480-6506</strong></a>
             </div>
           </div>
         </div>
@@ -472,12 +472,12 @@
           <input type="hidden" name="website_language" value="简体中文">
           <label>
             您的姓名
-            <input type="text" name="name" placeholder="张先生 / Jane Smith" required>
+            <input type="text" name="name" autocomplete="name" placeholder="张先生 / Jane Smith" required>
           </label>
 
           <label>
             商务邮箱
-            <input type="email" name="email" placeholder="name@company.com" required>
+            <input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" placeholder="name@company.com" required>
           </label>
 
           <label>
@@ -498,7 +498,7 @@
           </button>
 
           <p class="form-note" id="formNote">
-            此表单提交的询价将发送至 <strong>bylandoy1@sklboltseal.com</strong>。您也可以直接向此邮箱发送邮件。
+            此表单提交的询价将发送至 <a href="mailto:bylandoy1@sklboltseal.com"><strong>bylandoy1@sklboltseal.com</strong></a>。您也可以直接向此邮箱发送邮件。
           </p>
         </form>
       </div>

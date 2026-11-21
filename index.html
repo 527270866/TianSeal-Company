@@ -451,7 +451,7 @@
 
     <!-- ======================================================
          CONTACT
-         The form is front-end only until connected to a service/backend.
+         Inquiry delivery is configured through FormSubmit; activation is documented in FORM_INQUIRY_SETUP.md.
     ======================================================= -->
     <section class="section contact-section" id="contact">
       <div class="container contact-grid">
@@ -465,12 +465,12 @@
           <div class="contact-details">
             <div>
               <span>Email</span>
-               <strong>bylandoy1@gmail.com</strong><br>
-                <strong>bylandoy1@sklboltseal.com</strong>
+               <a href="mailto:bylandoy1@gmail.com"><strong>bylandoy1@gmail.com</strong></a><br>
+                <a href="mailto:bylandoy1@sklboltseal.com"><strong>bylandoy1@sklboltseal.com</strong></a>
             </div>
             <div>
               <span>Phone & Whatsapp</span>
-              <strong>+1 (909) 480-6506</strong>
+              <a href="tel:+19094806506"><strong>+1 (909) 480-6506</strong></a>
             </div>
           </div>
         </div>
@@ -482,12 +482,12 @@
           <input type="hidden" name="website_language" value="English">
           <label>
             Your name
-            <input type="text" name="name" placeholder="Jane Smith" required>
+            <input type="text" name="name" autocomplete="name" placeholder="Jane Smith" required>
           </label>
 
           <label>
             Business email
-            <input type="email" name="email" placeholder="jane@company.com" required>
+            <input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" placeholder="jane@company.com" required>
           </label>
 
           <label>
@@ -508,7 +508,7 @@
           </button>
 
           <p class="form-note" id="formNote">
-            Inquiries submitted here are sent to <strong>bylandoy1@sklboltseal.com</strong>. You can also contact this address directly.
+            Inquiries submitted here are sent to <a href="mailto:bylandoy1@sklboltseal.com"><strong>bylandoy1@sklboltseal.com</strong></a>. You can also contact this address directly.
           </p>
         </form>
       </div>

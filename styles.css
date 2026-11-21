@@ -1843,3 +1843,26 @@ button {
 .commercial-spec-item strong { display: block; color: var(--navy); font-size: .98rem; line-height: 1.45; }
 .commercial-spec-item strong::before { content: ""; display: block; width: 28px; height: 3px; margin-bottom: 12px; border-radius: 99px; background: var(--orange); }
 @media (max-width: 620px) { .commercial-spec-grid { grid-template-columns: 1fr; } .commercial-spec-item { min-height: auto; border-right: 0; } }
+
+/* Accessible direct contact actions and narrow-screen inquiry fields. */
+.contact-grid > * { min-width: 0; }
+.contact-details a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.contact-details a:focus-visible,
+.form-note a:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+}
+.form-note a { text-decoration: underline; overflow-wrap: anywhere; }
+.quote-form input, .quote-form select, .quote-form textarea { min-width: 0; }
+@media (max-width: 620px) {
+  .quote-form input, .quote-form select, .quote-form textarea { font-size: 16px; }
+}
