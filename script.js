@@ -7,21 +7,21 @@ const UI = {
   en: {
     view: "View", factoryModel: "Factory model", specialSourcing: "Special sourcing", byRequest: "BY REQUEST", viewProduct: "View product →", quote: "Quote",
     noMatch: "No matching model found. Try a different product code.",
-    desc: (m) => `Factory model ${m} from the Tianseal International Inc security seal catalog. Open the product page to view the supplied factory image and request current verified specifications.`,
+    desc: (m) => `Model ${m} from the Tianseal security-seal range. View product specifications and contact sales for availability, customization and pricing.`,
     specialDesc: (m) => `Special-sourcing model ${m} available by request. Current source, specifications, MOQ, lead time and availability are confirmed for each order.`,
     series: {"H Series":"H Series","FP Series":"FP Series","P Series":"P Series","Other Models":"Other Models"}
   },
   zh: {
     view: "查看", factoryModel: "工厂型号", specialSourcing: "特殊采购", byRequest: "按需供应", viewProduct: "查看产品 →", quote: "询价",
     noMatch: "未找到匹配型号，请尝试其他产品编号。",
-    desc: (m) => `Tianseal International Inc 安全封条目录中的工厂型号 ${m}。打开产品页面可查看工厂原图，并咨询当前确认后的规格。`,
+    desc: (m) => `Tianseal 安全封条型号 ${m}。查看产品规格，并向销售团队咨询供应情况、定制选项及报价。`,
     specialDesc: (m) => `型号 ${m} 为特殊采购产品，可按项目需求供应。当前供应来源、规格、MOQ、交期和可供情况将在每次询价时确认。`,
     series: {"H Series":"H 系列","FP Series":"FP 系列","P Series":"P 系列","Other Models":"其他型号"}
   },
   es: {
     view: "Ver", factoryModel: "Modelo de fábrica", specialSourcing: "Abastecimiento especial", byRequest: "BAJO SOLICITUD", viewProduct: "Ver producto →", quote: "Cotizar",
     noMatch: "No se encontró un modelo coincidente. Pruebe con otro código de producto.",
-    desc: (m) => `Modelo de fábrica ${m} del catálogo de sellos de seguridad de Tianseal International Inc. Abra la página del producto para ver la imagen de fábrica y solicitar especificaciones vigentes verificadas.`,
+    desc: (m) => `Modelo ${m} de la gama de sellos Tianseal. Consulte las especificaciones y contacte a ventas para disponibilidad, personalización y precios.`,
     specialDesc: (m) => `El modelo ${m} se ofrece mediante abastecimiento especial. La fuente actual, especificaciones, MOQ, plazo y disponibilidad se confirman para cada pedido.`,
     series: {"H Series":"Serie H","FP Series":"Serie FP","P Series":"Serie P","Other Models":"Otros modelos"}
   }
